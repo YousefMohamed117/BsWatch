@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bondi</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bondi.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -146,30 +148,20 @@
     </div>
      </div>
      <div class="samples">
-      <div class="container">
+      <div class="container text-center">
         <h2 class="text-center mb-5 mt-5 fs-2">Checkout Some Amazing Shorts</h2>
-        <div class="carousel-container w-100 overflow-hidden">
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner text-center">
-              <div class="carousel-item active">
-                <div class="sec d-flex justify-content-center">
-                  <img src="./img/showcase/showcase-2.png" class="me-5" alt="...">
-                  <img src="./img/showcase/showcase-3.png" class="me-5" alt="..."> 
-                  <img src="./img/showcase/showcase-5.png" class="me-5" alt="...">
-                  <img src="./img/showcase/showcase-6.png" class="me-5" alt="...">  
-                  <img src="./img/showcase/showcase-7.png" class="" alt="...">  
-                </div>
-              </div>
-              <div class="carousel-item  ">
-                <div class="sec d-flex justify-content-center">
-                  <img src="./img/showcase/showcase-3.png" class="me-5" alt="...">
-                <img src="./img/showcase/showcase-5.png" class="me-5" alt="...">
-                <img src="./img/showcase/showcase-1.png" class="me-5" alt="...">
-                <img src="./img/showcase/showcase-4.png" class="me-5" alt="...">
-                <img src="./img/showcase/showcase-8.png" class="" alt="...">
-                </div>
-              </div>
-            </div>
+        <div class="mySwiper overflow-hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-1.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-2.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-3.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-4.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-5.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-6.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-7.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-8.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-3.png" alt=""></div>
+            <div class="swiper-slide" style="width: 210px !important;"><img src="img/showcase/showcase-5.png" alt=""></div>
           </div>
         </div>
       </div>
@@ -223,7 +215,39 @@
         <p class="copy">Copyright © Themefisher| All right reserved.</p>
       </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper;
+
+    // Wait for the document to be ready
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        breakpoints: {
+        1440: {
+            slidesPerView: 5,
+        },
+        991: {
+            slidesPerView: 4,
+        },
+        767: {
+            slidesPerView: 3,
+        },
+        425: {
+            slidesPerView: 2,
+        },
+        
+        
+      },
+      spaceBetween: 20,
+      autoplay: {
+          delay: 2000, // Auto move every 3 seconds
+        },
+        loop: true,
+    });
+  </script>
      <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     
+
   </body>
 </html>
